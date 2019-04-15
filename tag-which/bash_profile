@@ -44,6 +44,7 @@ alias mine="rmine ."
 alias atom="atom ."
 alias checkport3000="lsof -i tcp:3000"
 alias killpid="kill -9 " # followed by PID number e.g.: `killpid 13822`
+alias dotfiles="cd ~/.dotfiles; atom ."
 
 # Which aliases
 alias bersit="RAILS_ENV=integration_test bundle exec rails s -p 3005"

@@ -45,6 +45,7 @@ alias mine="rmine ."
 alias atom="atom ."
 alias checkport3000="lsof -i tcp:3000"
 alias killpid="kill -9 " # followed by PID number e.g.: `killpid 13822`
+alias dotfiles="cd ~/.dotfiles; atom ."
 
 # make sure to add .git-completion.bash to home(~)
 if [ -f ~/.git-completion.bash ]; then
