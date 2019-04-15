@@ -1,0 +1,9 @@
+windows:
+  - name: main
+    root: ~/Projects/reviews-and-advice
+    layout: double-main-vertical
+    panes:
+      - vtop
+      - bers
+      - sq
+      - esl
