@@ -1,0 +1,14 @@
+windows:
+  - name: rad-base-requirements
+    root: ~/Projects/reviews-and-advice
+    layout: main-vertical
+    panes:
+      - commands:
+        - bers
+        name: 'rails'
+      - commands:
+        - sq
+        name: 'sidekiq'
+      - commands:
+        - esl
+        name: 'elasticsearch'

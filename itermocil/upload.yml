@@ -1,0 +1,15 @@
+windows:
+  - name: upload
+    root: ~/Projects/reviews-and-advice
+    layout: main-vertical-flipped
+    panes:
+      - commands:
+        - prepareforupload
+        - startupload
+        name: 'uploader'
+      - commands:
+        - tailupload
+        name: 'upload-logs'
+      - commands:
+        - vtop
+        name: 'vtop'
