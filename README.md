@@ -7,6 +7,8 @@ They assume you're using OSX.
 ## Installation
 
     $ cd ~/.dotfiles
+    $ brew tap thoughtbot/formulae
+    $ brew install rcm
     $ ./install.sh
 
 It will install Thoughtbot's [rcm](https://github.com/thoughtbot/rcm) and use that to safely symlink the dotfiles, prompting you
