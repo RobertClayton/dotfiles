@@ -1,6 +1,5 @@
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
-# Tell ls to be colourful
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -13,8 +12,6 @@ alias berc="bundle exec rails console"
 alias brdm="bundle exec rake db:migrate"
 alias checkport3000="lsof -i tcp:3000"
 alias dotfiles="cd ~/.dotfiles; atom ."
-alias es="cd ~/Projects/reviews-and-advice/; elasticsearch"
-alias esl="cd ~/Projects/reviews-and-advice/; ES_JAVA_OPTS='-Xms100m -Xmx1g' elasticsearch"
 alias ga="git add"
 alias gap="git add -p"
 alias gcm="git commit -m"
@@ -41,15 +38,92 @@ alias quiver="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/6-Programming/N
 alias rc="rails console"
 alias rdbm="rake db:migrate"
 alias rs="rails server"
-alias sq="bundle exec sidekiq -c 5 -q default -q published_edition_queue"
-alias startelastic="cd ~/Projects/reviews-and-advice/; elasticsearch"
-alias startelasticlimited="cd ~/Projects/reviews-and-advice/; ES_JAVA_OPTS='-Xms100m -Xmx1g' elasticsearch"
 alias startmedis="cd ~/Projects/medis; npm run electron"
 alias startredis="cd ~; redis-server"
-alias startsidekiq="bundle exec sidekiq -c 5 -q default -q published_edition_queue"
-alias tailredis="cd ~; redis-cli monitor"
+alias tailredis="cd ~; redis-cli monitor" 
+
+# Fun aliases
+alias mycommittimes="git log --author=\"RobertClayton\" --date=iso | perl -nalE 'if (/^Date:\s+[\d-]{10}\s(\d{2})/) { say \$1+0 }' | sort | uniq -c|perl -MList::Util=max -nalE '\$h{\$F[1]} = \$F[0]; }{ \$m = max values %h; foreach (0..23) { \$h{\$_} = 0 if not exists \$h{\$_} } foreach (sort {\$a <=> \$b } keys %h) { say sprintf \"%02d - %4d %s\", \$_, \$h{\$_}, \"*\"x (\$h{\$_} / \$m * 50); }'"
 alias temp="curl wttr.in"
 alias weather="curl wttr.in"
+
+
+function killprocess {
+  ### PROCESS
+  # show output of "ps -ef", use [tab] to select one or multiple entries
+  # press [enter] to kill selected processes and exit.
+  # or press [escape] to exit completely.
+
+  local pid=$(ps -ef | sed 1d | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='[kill:process]'" | awk '{print $2}')
+
+  if [ "x$pid" != "x" ]
+  then
+    echo $pid | xargs kill -${1:-9}
+  fi
+}
+alias kp=killprocess
+
+
+function findpath {
+  ### PATH
+  # list directories in $PATH, press [enter] on an entry to list the executables inside.
+  # press [escape] to exit.
+
+  local loc=$(echo $PATH | sed -e $'s/:/\\\n/g' | eval "fzf ${FZF_DEFAULT_OPTS} --header='[find:path]'")
+
+  if [[ -d $loc ]]; then
+    echo "$(rg --files $loc | rev | cut -d"/" -f1 | rev)" | eval "fzf ${FZF_DEFAULT_OPTS} --header='[find:exe] => ${loc}' >/dev/null"
+  fi
+}
+alias fp=findpath
+
+
+function brewinstallplugin {
+  ### BREW + FZF
+  # update multiple packages at once
+  # mnemonic [B]rew [I]nstall [P]lugin
+
+  local inst=$(brew search | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='[brew:install]'")
+
+  if [[ $inst ]]; then
+    for prog in $(echo $inst)
+    do brew install $prog
+    done
+  fi
+}
+alias bip=brewinstallplugin
+
+
+function brewupdateplugin {
+  ### BREW + FZF
+  # uninstall multiple packages at once, async
+  # mnemonic [B]rew [U]pdate [P]lugin
+
+  local upd=$(brew leaves | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='[brew:update]'")
+
+  if [[ $upd ]]; then
+    for prog in $(echo $upd)
+    do brew upgrade $prog
+    done
+  fi
+}
+alias bup=brewupdateplugin
+
+
+function brewcleanplugin {
+  ### BREW + FZF
+  # mnemonic [B]rew [C]lean [P]lugin (e.g. uninstall)
+
+  local uninst=$(brew leaves | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='[brew:clean]'")
+
+  if [[ $uninst ]]; then
+    for prog in $(echo $uninst)
+    do brew uninstall $prog
+    done
+  fi
+}
+alias bcp=brewcleanplugin
+
 
 # make sure to add .git-completion.bash to home(~)
 if [ -f ~/.git-completion.bash ]; then
