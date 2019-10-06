@@ -1,0 +1,15 @@
+# Lets us do `brew services restart postgres`, etc
+tap 'homebrew/services'
+tap 'thoughtbot/formulae'
+
+brew 'awscli'
+brew 'coreutils'
+brew 'curl'
+brew 'elasticsearch'
+brew 'fzf'
+brew 'git'
+brew 'heroku'
+brew 'rcm'
+brew 'ripgrep'
+brew 'TomAnthony/brews/itermocil'
+brew 'vim'
