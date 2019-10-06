@@ -1,3 +1,2 @@
 EXCLUDES="install.sh"
 SYMLINK_DIRS="bundle itermocil"
-TAGS="which"
