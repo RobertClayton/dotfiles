@@ -8,7 +8,6 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 ZSH_THEME="robbyrussell"
-RPROMPT='%{$fg_bold[yellow]%} %D{%C%m-%d-%y %I:%M:%S} % %{$reset_color%}'
 HIST_STAMPS="yyyy-mm-dd"
 
 # FZF Integration
@@ -21,5 +20,15 @@ do
   [ -f "$ALIAS" ] && source "$ALIAS"
 done
 
-# Leave this command last, so it can load in all the settings   above.
+# Leave this command last, so it can load in all the settings above.
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# `print_exit_value` shows a message with the exit code when a command returns with a non-zero exit code.
+# However, zsh-syntax-highlighting somehow unsets this options option, so we must set it after sourcing zsh-syntax-highlighting.
+setopt print_exit_value
+
+local timestamp="%{$fg_bold[yellow]%} %D{%C%m-%d-%y %I:%M:%S} % %{$reset_color%}"
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+local current_directory="%{$fg[cyan]%}%c%{$reset_color%}"
+PROMPT='${timestamp}${ret_status} ${current_directory} $(git_prompt_info)'
