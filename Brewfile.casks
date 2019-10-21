@@ -5,3 +5,17 @@
 cask 'alfred'
 cask 'dropbox'
 cask 'google-chrome'
+cask 'flux'
+cask 'jetbrains-toolbox'
+
+# Docker
+# Atom
+# Dash
+# Quiver
+# Slack
+# Firefox developer edition
+# Sequel Pro
+# Magnet
+# Postman
+# Spark
+# Trello
