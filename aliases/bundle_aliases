@@ -1,0 +1,5 @@
+alias be="bundle exec"
+alias ber="bundle exec rspec"
+alias bers="bundle exec rails server"
+alias berc="bundle exec rails console"
+alias brdm="bundle exec rake db:migrate"

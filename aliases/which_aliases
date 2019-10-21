@@ -1,4 +1,3 @@
-# Which aliases
 alias bec="DRIVER=chrome bundle exec cucumber"
 alias berit="bundle exec rspec --require ./uploader-integration-tests/spec/spec_helper"
 alias berit--all="bundle exec rspec --require ./uploader-integration-tests/spec/spec_helper uploader-integration-tests/spec/features"
