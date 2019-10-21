@@ -39,10 +39,11 @@ info "Linking dotfiles into ~..."
 # backup files that slow it down significantly.
 RCRC=rcrc rcup -d .
 
+info "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 info "Installing zsh-syntax-highlighting..."
-if [ ! -d ~/.zsh-plugins/zsh-syntax-highlighting ]; then
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
-fi
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-plugins/zsh-syntax-highlighting
 
 info "Installing fonts..."
 brew tap homebrew/cask-fonts
@@ -51,7 +52,7 @@ if ! system_profiler SPFontsDataType | grep -q 'Inconsolata-Regular'; then
   open fonts/Inconsolata*
 fi
 
-info "Running all setup scripts..."
+#info "Running all setup scripts..."
 #for setup in tag-*/setup; do
 #  dir=$(basename "$(dirname "$setup")")
 #  info "Running setup for ${dir#tag-}..."
