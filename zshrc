@@ -10,6 +10,10 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 ZSH_THEME="robbyrussell"
 HIST_STAMPS="yyyy-mm-dd"
 
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+plugins=(alias-finder colored-man-pages common-aliases copydir copyfile docker docker-compose git rails redis-cli ruby rvm zsh_reload)
+
 # FZF Integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--color fg:188,bg:016,hl:103,fg+:099,bg+:016,hl+:104,info:183,prompt:110,spinner:107,pointer:167,marker:215'
