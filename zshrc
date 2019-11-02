@@ -19,7 +19,7 @@ plugins=(alias-finder colored-man-pages common-aliases copydir copyfile docker d
 export FZF_DEFAULT_OPTS='--color fg:188,bg:016,hl:103,fg+:099,bg+:016,hl+:104,info:183,prompt:110,spinner:107,pointer:167,marker:215'
 
 # Aliases
-for ALIAS in `find $HOME/.dotfiles/aliases`
+for ALIAS in `find $HOME/dotfiles/aliases`
 do
   [ -f "$ALIAS" ] && source "$ALIAS"
 done
