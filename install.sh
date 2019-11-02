@@ -55,13 +55,11 @@ if ! system_profiler SPFontsDataType | grep -q 'Inconsolata-Regular'; then
   open fonts/Inconsolata*
 fi
 
-#info "Running all setup scripts..."
-#for setup in tag-*/setup; do
-#  dir=$(basename "$(dirname "$setup")")
-#  info "Running setup for ${dir#tag-}..."
-#  . "$setup"
-#done
-
-#asdf install
+info "Running all setup scripts..."
+for setup in tag-*/setup; do
+  dir=$(basename "$(dirname "$setup")")
+  info "Running setup for ${dir#tag-}..."
+  . "$setup"
+done
 
 info 'Install complete.'
