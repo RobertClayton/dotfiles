@@ -1,11 +1,12 @@
 # Lets us do `brew services restart postgres`, etc
+tap 'heroku/brew'
 tap 'homebrew/services'
 tap 'thoughtbot/formulae'
 
 brew 'awscli'
 brew 'coreutils'
 brew 'curl'
-brew 'elasticsearch'
+brew 'elastic/tap/elasticsearch-full'
 brew 'fzf'
 brew 'git'
 brew 'heroku'

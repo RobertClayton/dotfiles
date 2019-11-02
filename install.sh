@@ -14,18 +14,21 @@ info(){
 }
 
 brew_bundle(){
-  brew bundle --file="$1"
+  brew bundle --file="$1" --verbose
 }
 
 info "Installing Homebrew if not already installed..."
 if ! command -v brew > /dev/null; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update --verbose
 fi
 
 info "Installing Homebrew packages..."
 brew tap homebrew/bundle
 brew_bundle Brewfile
-# Brewfile.casks exits 1 sometimes but didn't actually fail
+
+info "Installing Homebrew casks..."
+# Sometimes exits 1 but didn't actually fail
 brew_bundle Brewfile.casks || true
 
 info "Checking for command-line tools..."

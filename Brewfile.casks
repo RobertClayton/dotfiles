@@ -3,19 +3,23 @@
 # "fail" when the apps are actually already installed.
 
 cask 'alfred'
+cask 'atom'
+cask 'dash'
+cask 'docker'
 cask 'dropbox'
-cask 'google-chrome'
+cask 'firefox'
 cask 'flux'
+cask 'google-chrome'
+cask 'iterm2'
 cask 'jetbrains-toolbox'
+cask 'postman'
+cask 'sequel-pro'
 
-# Docker
-# Atom
-# Dash
+### App Store installs:
+# 1Password
+# Magnet
 # Quiver
 # Slack
-# Firefox developer edition
-# Sequel Pro
-# Magnet
-# Postman
 # Spark
 # Trello
+# Xcode
