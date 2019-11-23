@@ -62,4 +62,18 @@ for setup in tag-*/setup; do
   . "$setup"
 done
 
+info "Creating Projects directory if not already created ..."
+if ! [ -d ~/Projects/ ]; then
+  mkdir ~/Projects
+fi
+
+info "Installing Medis if not already installed ..."
+if ! [ -d ~/Projects/medis ]; then
+  cd ~/Projects/
+  git clone git@github.com:luin/medis.git
+  cd ~/Projects/medis
+  npm install
+  npm run build
+fi
+
 info 'Install complete.'
