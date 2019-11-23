@@ -1,0 +1,12 @@
+windows:
+  - name: upload
+    root: ~/Projects/reviews-and-advice
+    layout: even-horizontal
+    panes:
+      - commands:
+          - prepareforupload
+          - startupload
+        name: 'uploader'
+      - commands:
+          - tailupload
+        name: 'upload-logs'

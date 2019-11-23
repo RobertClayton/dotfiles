@@ -1,0 +1,11 @@
+windows:
+  - name: rad-base-requirements
+    root: ~/Projects/reviews-and-advice
+    layout: even-horizontal
+    panes:
+      - commands:
+          - bers
+        name: 'rails'
+      - commands:
+          - sq
+        name: 'sidekiq'
