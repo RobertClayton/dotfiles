@@ -301,14 +301,3 @@
 | gin   | `gem install`                          | Install a gem into the local repository              |
 | gun   | `gem uninstall`                        | Uninstall gems from the local repository             |
 | gli   | `gem list`                             | Display gems installed locally                       |
-
-### RVM
-
-| Alias          | Command              |
-|----------------|----------------------|
-| `rb18`         | `rvm use ruby-1.8.7` |
-| `rb19`         | `rvm use ruby-1.9.3` |
-| `rb20`         | `rvm use ruby-2.0.0` |
-| `rb21`         | `rvm use ruby-2.1.2` |
-| `rvm-update`   | `rvm get head`       |
-| `gems`         | `gem list`           |

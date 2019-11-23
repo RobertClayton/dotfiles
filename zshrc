@@ -1,7 +1,10 @@
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$HOME/bin:$PATH"; # Add `~/bin` to the `$PATH`
-export PATH="/Users/rclayto/anaconda/bin:$PATH" # Add Anaconda to the `$PATH`
 export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh installation.
+
+# Loading rbenv
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 export PUMA_WORKER_TIMEOUT=99999999999999999999 # This is a work around to stop Puma timing out in development
 export CLICOLOR=1
@@ -12,7 +15,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(alias-finder colored-man-pages common-aliases copydir copyfile docker docker-compose git rails redis-cli ruby rvm zsh_reload)
+plugins=(alias-finder colored-man-pages common-aliases copydir copyfile docker docker-compose git rails redis-cli ruby zsh_reload)
 
 # FZF Integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+echo "Checking for RBenv Install..."
+if ! command -v rbenv &>/dev/null
+then
+  echo "Installing RBenv..."
+  brew install rbenv
+
+  echo "Initialising RBenv..."
+  rbenv init
+else
+  echo "RBenv already Installed"
+fi
