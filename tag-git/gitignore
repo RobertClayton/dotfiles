@@ -1,6 +1,6 @@
-# NOTE: This is the global gitignore, not the gitignore for the dotfiles
-# repository!
+# NOTE: This is the global gitignore, not the gitignore for the dotfiles repository!
 .DS_Store
 .idea/
 /bin/stubs/
 .bundle
+/vendor
