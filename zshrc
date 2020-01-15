@@ -40,7 +40,7 @@ source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # However, zsh-syntax-highlighting somehow unsets this options option, so we must set it after sourcing zsh-syntax-highlighting.
 setopt print_exit_value
 
-local timestamp="%{$fg_bold[yellow]%} %D{%C%m-%d-%y %I:%M:%S} % %{$reset_color%}"
+local timestamp="%{$fg_bold[yellow]%} %D{%F %T} % %{$reset_color%}"
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 local current_directory="%{$fg[cyan]%}%c%{$reset_color%}"
 PROMPT='${timestamp}${ret_status} ${current_directory} $(git_prompt_info)'
