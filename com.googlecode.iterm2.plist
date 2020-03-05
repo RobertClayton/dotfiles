@@ -4,6 +4,8 @@
 <dict>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -2219,6 +2221,7 @@
 	<array>
 		<string>3.3.6</string>
 		<string>3.3.7</string>
+		<string>3.3.8</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -2230,7 +2233,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>E15B7CE7-33C1-4D32-8430-10EBE1EE663B</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>16</integer>
+	<integer>19</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2949,19 +2952,6 @@
 	</dict>
 	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
 	<true/>
-	<key>NoSyncSearchHistory2</key>
-	<array>
-		<string>redis</string>
-		<string>data import started</string>
-		<string>consum</string>
-		<string>alias</string>
-		<string>Rescues the request if the product client can not be reached</string>
-		<string>#updates_since?(date)</string>
-		<string>When there are updates to download</string>
-		<string>'When there are updates to download</string>
-		<string>item_aret_oast</string>
-		<string>ache</string>
-	</array>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>593702101.82051206</real>
 	<key>PMPrintingExpandedStateForPrint2</key>
@@ -3014,7 +3004,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-01-16T10:04:54Z</date>
+	<date>2020-02-07T13:49:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -3044,7 +3034,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.7</string>
+	<string>3.3.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
