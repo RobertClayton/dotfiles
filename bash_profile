@@ -17,3 +17,7 @@ done
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/RClayto/.sdkman"
+[[ -s "/Users/RClayto/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/RClayto/.sdkman/bin/sdkman-init.sh"

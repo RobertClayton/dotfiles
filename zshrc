@@ -44,3 +44,7 @@ local timestamp="%{$fg_bold[yellow]%} %D{%F %T} % %{$reset_color%}"
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 local current_directory="%{$fg[cyan]%}%c%{$reset_color%}"
 PROMPT='${timestamp}${ret_status} ${current_directory} $(git_prompt_info)'
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/RClayto/.sdkman"
+[[ -s "/Users/RClayto/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/RClayto/.sdkman/bin/sdkman-init.sh"
