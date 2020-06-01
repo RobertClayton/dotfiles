@@ -2,3 +2,5 @@
 [user]
 	name = RobertClayton
 	email = robbie.c.clayton@gmail.com
+[core]
+	autocrlf = input
