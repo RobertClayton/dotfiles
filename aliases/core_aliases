@@ -1,6 +1,7 @@
 alias atom="atom ."
 alias bashp="atom ~/.bash_profile"
 alias checkport3000="lsof -i tcp:3000"
+alias deleteandcleandocker="docker rmi $(docker images -q)"
 alias deleteminescript="rm /usr/local/bin/mine; rm /usr/local/bin/rmine"
 alias dotfiles="cd ~/dotfiles"
 alias findalias="alias | fzf"
