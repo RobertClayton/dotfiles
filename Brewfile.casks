@@ -2,15 +2,15 @@
 # These are in a separate file so that install.sh can let installing these casks
 # "fail" when the apps are actually already installed.
 
-cask 'alfred'
-cask 'atom'
+# cask 'alfred'
+# cask 'atom'
 cask 'dash'
-cask 'docker'
-cask 'dropbox'
-cask 'firefox'
+# cask 'docker'
+# cask 'dropbox'
+# cask 'firefox'
 cask 'flux'
-cask 'google-chrome'
-cask 'iterm2'
+# cask 'google-chrome'
+# cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'postman'
 cask 'sequel-pro'
