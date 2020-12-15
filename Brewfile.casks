@@ -13,7 +13,8 @@ cask 'flux'
 # cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'postman'
-cask 'sequel-pro'
+# cask 'sequel-pro'
+# cask 'sequel-ace'
 
 ### App Store installs:
 # 1Password
