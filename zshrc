@@ -1,3 +1,7 @@
+ZSH_DISABLE_COMPFIX="true"
+ZSH_THEME="robbyrussell"
+HIST_STAMPS="yyyy-mm-dd"
+
 export PATH="$HOME/bin:$PATH"; # Add `~/bin` to the `$PATH`
 export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh installation.
 
@@ -15,8 +19,9 @@ export PUMA_WORKER_TIMEOUT=99999999999999999999 # This is a work around to stop 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-ZSH_THEME="robbyrussell"
-HIST_STAMPS="yyyy-mm-dd"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
