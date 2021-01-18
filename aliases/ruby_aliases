@@ -1,3 +1,4 @@
+alias brs="./bin/rails server"
 alias rc="rails console"
 alias rdbm="rake db:migrate"
 alias rs="rails server"
