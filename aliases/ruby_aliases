@@ -1,5 +1,6 @@
 alias brs="./bin/rails server"
+alias installmysql2="gem install mysql2 --source 'https://rubygems.org/' -- --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include"
+alias rbenv-doctor="curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash"
 alias rc="rails console"
 alias rdbm="rake db:migrate"
 alias rs="rails server"
-alias rbenv-doctor="curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash"
