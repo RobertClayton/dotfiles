@@ -37,6 +37,9 @@ do
   [ -f "$ALIAS" ] && source "$ALIAS"
 done
 
+# SP specific config
+. ~/dotfiles/sp/ateam.sh
+
 # Leave this command last, so it can load in all the settings above.
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
